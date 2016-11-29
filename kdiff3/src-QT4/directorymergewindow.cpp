@@ -434,6 +434,7 @@ public:
    KAction* m_pDirRunOperationForCurrentItem;
    KAction* m_pDirCompareCurrent;
    KAction* m_pDirMergeCurrent;
+   KAction* m_pDirShowStatus;
    KAction* m_pDirRescan;
    KAction* m_pDirChooseAEverywhere;
    KAction* m_pDirChooseBEverywhere;
@@ -3393,6 +3394,7 @@ void DirectoryMergeWindow::initDirectoryMergeActions( QObject* pKDiff3App, KActi
    d->m_pDirMergeCurrent = KDiff3::createAction< KAction >(i18n("Merge Current File"), QIcon(QPixmap(startmerge)), i18n("Merge\nFile"), pKDiff3App, SLOT(slotMergeCurrentFile()), ac, "merge_current");
    d->m_pDirFoldAll = KDiff3::createAction< KAction >(i18n("Fold All Subdirs"), p, SLOT(collapseAll()), ac, "dir_fold_all");
    d->m_pDirUnfoldAll = KDiff3::createAction< KAction >(i18n("Unfold All Subdirs"), p, SLOT(expandAll()), ac, "dir_unfold_all");
+   d->m_pDirShowStatus = KDiff3::createAction< KAction >(i18n("Show Directory Comparison Status"), p, SLOT(showDirStatus()), ac, "dir_show_status");
    d->m_pDirRescan = KDiff3::createAction< KAction >(i18n("Rescan"), KShortcut( Qt::SHIFT+Qt::Key_F5 ), p, SLOT(reload()), ac, "dir_rescan");
    d->m_pDirSaveMergeState = 0; //KDiff3::createAction< KAction >(i18n("Save Directory Merge State ..."), 0, p, SLOT(slotSaveMergeState()), ac, "dir_save_merge_state");
    d->m_pDirLoadMergeState = 0; //KDiff3::createAction< KAction >(i18n("Load Directory Merge State ..."), 0, p, SLOT(slotLoadMergeState()), ac, "dir_load_merge_state");
@@ -3448,6 +3450,7 @@ void DirectoryMergeWindow::updateAvailabilities( bool bDirCompare, bool bDiffWin
    d->m_pDirMergeCurrent->setEnabled( (bDirCompare  &&  isVisible()  &&  isFileSelected())
                                 || bDiffWindowVisible );
 
+   d->m_pDirShowStatus->setEnabled( bDirCompare );
    d->m_pDirRescan->setEnabled( bDirCompare );
 
    d->m_pDirAutoChoiceEverywhere->setEnabled( bDirCompare &&  isVisible() );
