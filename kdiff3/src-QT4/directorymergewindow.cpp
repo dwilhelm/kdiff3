@@ -849,6 +849,36 @@ int DirectoryMergeWindow::totalColumnWidth()
    return w;
 }
 
+void DirectoryMergeWindow::showDirStatus()
+{
+      // Generate a status report
+      int nofFiles=0;
+      int nofDirs=0;
+      int nofEqualFiles=0;
+      int nofManualMerges=0;
+//TODO
+      for( int childIdx = 0; childIdx<d->rowCount(); ++childIdx )
+         d->calcDirStatus( d->m_dirC.isValid(), d->index(childIdx,0,QModelIndex()),
+                           nofFiles, nofDirs, nofEqualFiles, nofManualMerges );
+
+      QString s;
+      s = i18n("Directory Comparison Status") + "\n\n" +
+          i18n("Number of subdirectories:") +" "+ QString::number(nofDirs)       + "\n"+
+          i18n("Number of equal files:")     +" "+ QString::number(nofEqualFiles) + "\n"+
+          i18n("Number of different files:") +" "+ QString::number(nofFiles-nofEqualFiles);
+
+      if ( d->m_dirC.isValid() )
+         s += "\n" + i18n("Number of manual merges:")   +" "+ QString::number(nofManualMerges);
+      KMessageBox::information( this, s );
+      //
+      //TODO
+      //if ( topLevelItemCount()>0 )
+      //{
+      //   topLevelItem(0)->setSelected(true);
+      //   setCurrentItem( topLevelItem(0) );
+      //}
+}
+
 void DirectoryMergeWindow::reload()
 {
    if ( isDirectoryMergeInProgress() )
@@ -1202,32 +1232,7 @@ bool DirectoryMergeWindow::Data::init
 
    if ( bContinue && !m_bSkipDirStatus )
    {
-      // Generate a status report
-      int nofFiles=0;
-      int nofDirs=0;
-      int nofEqualFiles=0;
-      int nofManualMerges=0;
-//TODO
-      for( int childIdx = 0; childIdx<rowCount(); ++childIdx )
-         calcDirStatus( m_dirC.isValid(), index(childIdx,0,QModelIndex()),
-                        nofFiles, nofDirs, nofEqualFiles, nofManualMerges );
-
-      QString s;
-      s = i18n("Directory Comparison Status") + "\n\n" +
-          i18n("Number of subdirectories:") +" "+ QString::number(nofDirs)       + "\n"+
-          i18n("Number of equal files:")     +" "+ QString::number(nofEqualFiles) + "\n"+
-          i18n("Number of different files:") +" "+ QString::number(nofFiles-nofEqualFiles);
-
-      if ( m_dirC.isValid() )
-         s += "\n" + i18n("Number of manual merges:")   +" "+ QString::number(nofManualMerges);
-      KMessageBox::information( q, s );
-      //
-      //TODO
-      //if ( topLevelItemCount()>0 )
-      //{
-      //   topLevelItem(0)->setSelected(true);
-      //   setCurrentItem( topLevelItem(0) );
-      //}
+      q->showDirStatus();
    }
 
    if ( bReload )

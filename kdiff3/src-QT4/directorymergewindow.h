@@ -80,6 +80,7 @@ public:
    void updateAvailabilities( bool bDirCompare, bool bDiffWindowVisible,
       KToggleAction* chooseA, KToggleAction* chooseB, KToggleAction* chooseC );
    void updateFileVisibilities();
+   void showDirStatus();
 
    virtual void mousePressEvent( QMouseEvent* e );
    virtual void keyPressEvent( QKeyEvent* e );
