@@ -1,6 +1,8 @@
+/.vs
 /Debug
 /Release
 *.o
+*.user
 .qmake.stash
 Makefile
 Makefile.Debug

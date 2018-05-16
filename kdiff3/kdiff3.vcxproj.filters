@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="diff_ext_for_kdiff3\class_factory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="diff_ext_for_kdiff3\diff_ext.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="diff_ext_for_kdiff3\server.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="kdiff3fileitemactionplugin\kdiff3fileitemaction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="kdiff3plugin-qt4\kdiff3plugin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src-qt4\ccInstHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src-qt4\common.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src-qt4\diff.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src-qt4\difftextwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src-qt4\directorymergewindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src-qt4\fileaccess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src-qt4\gnudiff_analyze.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src-qt4\gnudiff_io.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src-qt4\gnudiff_xmalloc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src-qt4\kdiff3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src-qt4\kdiff3_part.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src-qt4\kdiff3_shell.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src-qt4\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src-qt4\merger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src-qt4\mergeresultwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src-qt4\optiondialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src-qt4\pdiff.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src-qt4\progress.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src-qt4\smalldialogs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src-qt4\stable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src-qt4\kreplacements\kreplacements.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src-qt4\kreplacements\ShellContextMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test\alignmenttest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test\fakefileaccess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test\fakekdiff3_part.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test\fakeprogressproxy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="windows_installer\ccinstallhelper\ccInstHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="diff_ext_for_kdiff3\diff_ext_for_kdiff3.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="diff_ext_for_kdiff3\diff_ext_for_kdiff3_msvc.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="windows_installer\ccinstallhelper\ccinstallhelper.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="doc\en\common\artistic-license.html" />
+    <None Include="doc\en\common\bsd-license.html" />
+    <None Include="doc\en\common\fdl-license.html" />
+    <None Include="doc\en\common\fdl-notice.html" />
+    <None Include="doc\en\common\footer.html" />
+    <None Include="doc\en\common\gpl-license.html" />
+    <None Include="doc\en\common\header.html" />
+    <None Include="doc\en\common\lgpl-license.html" />
+    <None Include="doc\en\common\mainfooter.html" />
+    <None Include="doc\en\common\mainheader.html" />
+    <None Include="doc\en\common\qpl-license.html" />
+    <None Include="doc\en\common\x11-license.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="buildtools\win32-64-g++\qplatformdefs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="buildtools\win32-x86-g++\qplatformdefs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="diff_ext_for_kdiff3\class_factory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="diff_ext_for_kdiff3\diffextstring.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="diff_ext_for_kdiff3\diff_ext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="diff_ext_for_kdiff3\server.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kdiff3fileitemactionplugin\kdiff3fileitemaction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kdiff3plugin-qt4\kdiff3plugin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\diff.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\difftextwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\directorymergewindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\fileaccess.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\gnudiff_diff.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\gnudiff_system.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\guiutils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kdiff3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kdiff3_part.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kdiff3_shell.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\merger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\mergeresultwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\optiondialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\options.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\progress.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\smalldialogs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\stable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\config-kdiff3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kaboutdata.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kaccel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kaction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kactioncollection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kapplication.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kcmdlineargs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kcolorbutton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kcomponentdata.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kconfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kdialogbase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kedittoolbar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kfiledialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kfontdialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kglobal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kiconloader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kinstance.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\klibloader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\klocale.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kmainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kmenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kmenubar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kmessagebox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\konq_popupmenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kpagedialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kprinter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kprogress.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kprogressdialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kreplacements.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kshortcutsdialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kstandardaction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kstandarddirs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kstatusbar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\ktemporaryfile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\ktoggleaction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\ktoolbar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kunload.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kurl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\ShellContextMenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kio\copyjob.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kio\global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kio\job.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kio\jobclasses.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kio\jobuidelegate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kparts\factory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kparts\mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src-qt4\kreplacements\kparts\part.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="diff_ext_for_kdiff3\diff_ext_for_kdiff3.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="src-qt4\kdiff3os2.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="src-qt4\kdiff3win.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="src-qt4\kdiff3_part.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="src-qt4\kdiff3_shell.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

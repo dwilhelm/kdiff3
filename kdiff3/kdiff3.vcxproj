@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{806DF443-AC27-4445-BD43-DAFD790C0939}</ProjectGuid>
+    <Keyword>MakeFileProj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakeBuildCommandLine>$(ProjectDir)\buildTools\build_kdiff3.bat debug</NMakeBuildCommandLine>
+    <NMakeCleanCommandLine>$(ProjectDir)\buildTools\build_kdiff3.bat clean</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>$(ProjectDir)\buildTools\build_kdiff3.bat debug</NMakeReBuildCommandLine>
+    <NMakePreprocessorDefinitions>
+    </NMakePreprocessorDefinitions>
+    <IntDir>$(ProjectDir)$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakeBuildCommandLine>$(ProjectDir)\buildTools\build_kdiff3.bat release</NMakeBuildCommandLine>
+    <NMakeCleanCommandLine>$(ProjectDir)\buildTools\build_kdiff3.bat clean</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>$(ProjectDir)\buildTools\build_kdiff3.bat release</NMakeReBuildCommandLine>
+    <NMakePreprocessorDefinitions>
+    </NMakePreprocessorDefinitions>
+    <IntDir>$(ProjectDir)$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IntDir>$(ProjectDir)$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <NMakeBuildCommandLine>$(ProjectDir)\buildTools\build_kdiff3.bat debug</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>$(ProjectDir)\buildTools\build_kdiff3.bat debug</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(ProjectDir)\buildTools\build_kdiff3.bat clean</NMakeCleanCommandLine>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IntDir>$(ProjectDir)$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <NMakeBuildCommandLine>$(ProjectDir)\buildTools\build_kdiff3.bat release</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>$(ProjectDir)\buildTools\build_kdiff3.bat release</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(ProjectDir)\buildTools\build_kdiff3.bat clean</NMakeCleanCommandLine>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="diff_ext_for_kdiff3\class_factory.cpp" />
+    <ClCompile Include="diff_ext_for_kdiff3\diff_ext.cpp" />
+    <ClCompile Include="diff_ext_for_kdiff3\server.cpp" />
+    <ClCompile Include="kdiff3fileitemactionplugin\kdiff3fileitemaction.cpp" />
+    <ClCompile Include="kdiff3plugin-qt4\kdiff3plugin.cpp" />
+    <ClCompile Include="src-qt4\ccInstHelper.cpp" />
+    <ClCompile Include="src-qt4\common.cpp" />
+    <ClCompile Include="src-qt4\diff.cpp" />
+    <ClCompile Include="src-qt4\difftextwindow.cpp" />
+    <ClCompile Include="src-qt4\directorymergewindow.cpp" />
+    <ClCompile Include="src-qt4\fileaccess.cpp" />
+    <ClCompile Include="src-qt4\gnudiff_analyze.cpp" />
+    <ClCompile Include="src-qt4\gnudiff_io.cpp" />
+    <ClCompile Include="src-qt4\gnudiff_xmalloc.cpp" />
+    <ClCompile Include="src-qt4\kdiff3.cpp" />
+    <ClCompile Include="src-qt4\kdiff3_part.cpp" />
+    <ClCompile Include="src-qt4\kdiff3_shell.cpp" />
+    <ClCompile Include="src-qt4\kreplacements\kreplacements.cpp" />
+    <ClCompile Include="src-qt4\kreplacements\ShellContextMenu.cpp" />
+    <ClCompile Include="src-qt4\main.cpp" />
+    <ClCompile Include="src-qt4\merger.cpp" />
+    <ClCompile Include="src-qt4\mergeresultwindow.cpp" />
+    <ClCompile Include="src-qt4\optiondialog.cpp" />
+    <ClCompile Include="src-qt4\pdiff.cpp" />
+    <ClCompile Include="src-qt4\progress.cpp" />
+    <ClCompile Include="src-qt4\smalldialogs.cpp" />
+    <ClCompile Include="src-qt4\stable.cpp" />
+    <ClCompile Include="test\alignmenttest.cpp" />
+    <ClCompile Include="test\fakefileaccess.cpp" />
+    <ClCompile Include="test\fakekdiff3_part.cpp" />
+    <ClCompile Include="test\fakeprogressproxy.cpp" />
+    <ClCompile Include="windows_installer\ccinstallhelper\ccInstHelper.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="diff_ext_for_kdiff3\diff_ext_for_kdiff3.def" />
+    <None Include="diff_ext_for_kdiff3\diff_ext_for_kdiff3_msvc.def" />
+    <None Include="doc\en\common\artistic-license.html" />
+    <None Include="doc\en\common\bsd-license.html" />
+    <None Include="doc\en\common\fdl-license.html" />
+    <None Include="doc\en\common\fdl-notice.html" />
+    <None Include="doc\en\common\footer.html" />
+    <None Include="doc\en\common\gpl-license.html" />
+    <None Include="doc\en\common\header.html" />
+    <None Include="doc\en\common\lgpl-license.html" />
+    <None Include="doc\en\common\mainfooter.html" />
+    <None Include="doc\en\common\mainheader.html" />
+    <None Include="doc\en\common\qpl-license.html" />
+    <None Include="doc\en\common\x11-license.html" />
+    <None Include="windows_installer\ccinstallhelper\ccinstallhelper.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="buildtools\win32-64-g++\qplatformdefs.h" />
+    <ClInclude Include="buildtools\win32-x86-g++\qplatformdefs.h" />
+    <ClInclude Include="diff_ext_for_kdiff3\class_factory.h" />
+    <ClInclude Include="diff_ext_for_kdiff3\diffextstring.h" />
+    <ClInclude Include="diff_ext_for_kdiff3\diff_ext.h" />
+    <ClInclude Include="diff_ext_for_kdiff3\server.h" />
+    <ClInclude Include="kdiff3fileitemactionplugin\kdiff3fileitemaction.h" />
+    <ClInclude Include="kdiff3plugin-qt4\kdiff3plugin.h" />
+    <ClInclude Include="src-qt4\common.h" />
+    <ClInclude Include="src-qt4\diff.h" />
+    <ClInclude Include="src-qt4\difftextwindow.h" />
+    <ClInclude Include="src-qt4\directorymergewindow.h" />
+    <ClInclude Include="src-qt4\fileaccess.h" />
+    <ClInclude Include="src-qt4\gnudiff_diff.h" />
+    <ClInclude Include="src-qt4\gnudiff_system.h" />
+    <ClInclude Include="src-qt4\guiutils.h" />
+    <ClInclude Include="src-qt4\kdiff3.h" />
+    <ClInclude Include="src-qt4\kdiff3_part.h" />
+    <ClInclude Include="src-qt4\kdiff3_shell.h" />
+    <ClInclude Include="src-qt4\kreplacements\config-kdiff3.h" />
+    <ClInclude Include="src-qt4\kreplacements\kaboutdata.h" />
+    <ClInclude Include="src-qt4\kreplacements\kaccel.h" />
+    <ClInclude Include="src-qt4\kreplacements\kaction.h" />
+    <ClInclude Include="src-qt4\kreplacements\kactioncollection.h" />
+    <ClInclude Include="src-qt4\kreplacements\kapplication.h" />
+    <ClInclude Include="src-qt4\kreplacements\kcmdlineargs.h" />
+    <ClInclude Include="src-qt4\kreplacements\kcolorbutton.h" />
+    <ClInclude Include="src-qt4\kreplacements\kcomponentdata.h" />
+    <ClInclude Include="src-qt4\kreplacements\kconfig.h" />
+    <ClInclude Include="src-qt4\kreplacements\kdialogbase.h" />
+    <ClInclude Include="src-qt4\kreplacements\kedittoolbar.h" />
+    <ClInclude Include="src-qt4\kreplacements\kfiledialog.h" />
+    <ClInclude Include="src-qt4\kreplacements\kfontdialog.h" />
+    <ClInclude Include="src-qt4\kreplacements\kglobal.h" />
+    <ClInclude Include="src-qt4\kreplacements\kiconloader.h" />
+    <ClInclude Include="src-qt4\kreplacements\kinstance.h" />
+    <ClInclude Include="src-qt4\kreplacements\kio\copyjob.h" />
+    <ClInclude Include="src-qt4\kreplacements\kio\global.h" />
+    <ClInclude Include="src-qt4\kreplacements\kio\job.h" />
+    <ClInclude Include="src-qt4\kreplacements\kio\jobclasses.h" />
+    <ClInclude Include="src-qt4\kreplacements\kio\jobuidelegate.h" />
+    <ClInclude Include="src-qt4\kreplacements\klibloader.h" />
+    <ClInclude Include="src-qt4\kreplacements\klocale.h" />
+    <ClInclude Include="src-qt4\kreplacements\kmainwindow.h" />
+    <ClInclude Include="src-qt4\kreplacements\kmenu.h" />
+    <ClInclude Include="src-qt4\kreplacements\kmenubar.h" />
+    <ClInclude Include="src-qt4\kreplacements\kmessagebox.h" />
+    <ClInclude Include="src-qt4\kreplacements\konq_popupmenu.h" />
+    <ClInclude Include="src-qt4\kreplacements\kpagedialog.h" />
+    <ClInclude Include="src-qt4\kreplacements\kparts\factory.h" />
+    <ClInclude Include="src-qt4\kreplacements\kparts\mainwindow.h" />
+    <ClInclude Include="src-qt4\kreplacements\kparts\part.h" />
+    <ClInclude Include="src-qt4\kreplacements\kprinter.h" />
+    <ClInclude Include="src-qt4\kreplacements\kprogress.h" />
+    <ClInclude Include="src-qt4\kreplacements\kprogressdialog.h" />
+    <ClInclude Include="src-qt4\kreplacements\kreplacements.h" />
+    <ClInclude Include="src-qt4\kreplacements\kshortcutsdialog.h" />
+    <ClInclude Include="src-qt4\kreplacements\kstandardaction.h" />
+    <ClInclude Include="src-qt4\kreplacements\kstandarddirs.h" />
+    <ClInclude Include="src-qt4\kreplacements\kstatusbar.h" />
+    <ClInclude Include="src-qt4\kreplacements\ktemporaryfile.h" />
+    <ClInclude Include="src-qt4\kreplacements\ktoggleaction.h" />
+    <ClInclude Include="src-qt4\kreplacements\ktoolbar.h" />
+    <ClInclude Include="src-qt4\kreplacements\kunload.h" />
+    <ClInclude Include="src-qt4\kreplacements\kurl.h" />
+    <ClInclude Include="src-qt4\kreplacements\ShellContextMenu.h" />
+    <ClInclude Include="src-qt4\merger.h" />
+    <ClInclude Include="src-qt4\mergeresultwindow.h" />
+    <ClInclude Include="src-qt4\optiondialog.h" />
+    <ClInclude Include="src-qt4\options.h" />
+    <ClInclude Include="src-qt4\progress.h" />
+    <ClInclude Include="src-qt4\smalldialogs.h" />
+    <ClInclude Include="src-qt4\stable.h" />
+    <ClInclude Include="src-qt4\version.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="diff_ext_for_kdiff3\diff_ext_for_kdiff3.rc" />
+    <ResourceCompile Include="src-qt4\kdiff3os2.rc" />
+    <ResourceCompile Include="src-qt4\kdiff3win.rc" />
+    <ResourceCompile Include="src-qt4\kdiff3_part.rc" />
+    <ResourceCompile Include="src-qt4\kdiff3_shell.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
