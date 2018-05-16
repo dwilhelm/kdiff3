@@ -18,6 +18,7 @@ nmake clean
 
 if x%1==xdebug (
     if not exist %DEBUG_DIR% mkdir %DEBUG_DIR%
+    powershell -File .\buildTools\setgitversion.ps1
     copy %QTDIR%\bin\Qt5Cored.dll %DEBUG_DIR%
     copy %QTDIR%\bin\Qt5Guid.dll %DEBUG_DIR%
     copy %QTDIR%\bin\Qt5PrintSupportd.dll %DEBUG_DIR%
@@ -25,6 +26,7 @@ if x%1==xdebug (
     nmake debug
 ) else if not x%1==xclean (
     if not exist %RELEASE_DIR% mkdir %RELEASE_DIR%
+    powershell -File .\buildTools\setgitversion.ps1
     copy %QTDIR%\bin\Qt5Core.dll %RELEASE_DIR%
     copy %QTDIR%\bin\Qt5Gui.dll %RELEASE_DIR%
     copy %QTDIR%\bin\Qt5PrintSupport.dll %RELEASE_DIR%
@@ -32,3 +34,5 @@ if x%1==xdebug (
     nmake release
     nmake clean
 )
+
+git checkout %SRCROOT%\kdiff3\src-QT4\version.h
