@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Product
+        Name="KDiff3 $(var.Version)"
+        Manufacturer="David Wilhelm"
+        Id="57B09C49-7BB9-4B2F-9EC0-15DB5BC11E8D" 
+        UpgradeCode="232CAEDF-5335-4BC4-B5A8-DDEAAD824F5C"
+        Language="1033"
+        Codepage="1252"
+        Version="$(var.Version)">
+
+        <Package
+            Id="*"
+            Keywords="Installer"
+            Description="KDiff3 $(var.Version) Installer"
+            Comments="David Wilhelm fork of KDiff3"
+            Manufacturer="David Wilhelm"
+            InstallerVersion="200"
+            Languages="1033"
+            SummaryCodepage="1252"
+            Compressed="yes"
+            Platform="x64"
+        />
+
+        <Media Id="1" Cabinet="kdiff3.cab" EmbedCab="yes" DiskPrompt="CD-ROM #1" />
+
+        <Property Id="DiskPrompt" Value="KDiff3 Installation [1]" />
+
+        <Directory Id="TARGETDIR" Name="SourceDir">
+
+            <Directory Id="ProgramFiles64Folder" Name="PFiles">
+                <Directory Id="INSTALLDIR" Name="KDiff3-$(var.Version)">
+                    <Component Id="MainExecutable" Guid="A5647472-E191-43A8-AF37-5069B6F116CF" Win64="yes">
+                        <File Id="KDiffEXE" Name="kdiff3.exe" DiskId="1" Source="kdiff3.exe"  KeyPath="yes" />
+                    </Component>
+                    <Component Id="Qt5CoreLibrary" Guid="FCFFD920-12AF-4BE8-9455-C3E2DC2ADE9A" Win64="yes">
+                        <File Id="Qt5CoreDLL" Name="Qt5Core.dll" DiskId="1" Source="Qt5Core.dll" KeyPath="yes" />
+                    </Component>
+                    <Component Id="Qt5GuiLibrary" Guid="E4621E10-6E07-4131-AE1F-57608768B94C" Win64="yes">
+                        <File Id="Qt5GuiDLL" Name="Qt5Gui.dll" DiskId="1" Source="Qt5Gui.dll" KeyPath="yes" />
+                    </Component>
+                    <Component Id="Qt5PrintSupportLibrary" Guid="4A99AEF2-CA07-444C-BA0F-121A7A09B14A" Win64="yes">
+                        <File Id="Qt5PrintSupportDLL" Name="Qt5PrintSupport.dll" DiskId="1" Source="Qt5PrintSupport.dll" KeyPath="yes" />
+                    </Component>
+                    <Component Id="Qt5WidgetsLibrary" Guid="7EE55974-56EA-4337-AD21-EC158E499FF1" Win64="yes">
+                        <File Id="Qt5WidgetsDLL" Name="Qt5Widgets.dll" DiskId="1" Source="Qt5Widgets.dll" KeyPath="yes" />
+                    </Component>
+                </Directory>
+            </Directory>
+
+            <Directory Id="ProgramMenuFolder" Name="Programs">
+                <Directory Id="ProgramMenuDir" Name="KDiff3-$(var.Version)">
+                    <Component Id="ProgramMenuDir" Guid="D8D98BEC-6B0A-4C58-BE8A-BE6F60B1C3A8">
+                        <RemoveFolder Id="ProgramMenuDir" On="uninstall" />
+                        <RegistryValue Root="HKCU" Key="Software\[Manufacturer]\[ProductName]" Type="string" Value="" KeyPath="yes" />
+                    </Component>
+                </Directory>
+            </Directory>
+
+        </Directory>
+
+        <Feature Id="Complete" Level="1">
+            <ComponentRef Id="MainExecutable" />
+            <ComponentRef Id="Qt5CoreLibrary" />
+            <ComponentRef Id="Qt5GuiLibrary" />
+            <ComponentRef Id="Qt5PrintSupportLibrary" />
+            <ComponentRef Id="Qt5WidgetsLibrary" />
+            <ComponentRef Id="ProgramMenuDir" />
+        </Feature>
+
+    </Product>
+</Wix>
