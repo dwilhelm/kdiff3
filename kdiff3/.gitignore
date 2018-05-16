@@ -1,2 +1,8 @@
+/Debug
+/Release
 *.o
+.qmake.stash
+Makefile
+Makefile.Debug
+Makefile.Release
 moc_*.cpp
