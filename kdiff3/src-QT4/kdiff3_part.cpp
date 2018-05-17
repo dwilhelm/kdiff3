@@ -313,7 +313,4 @@ extern "C"
     }
 }
 
-// Suppress warning with --enable-final
-#undef VERSION
-
 //#include "kdiff3_part.moc"

@@ -277,6 +277,3 @@ int main(int argc, char *argv[])
      QApplication::clipboard()->clear(); // Patch for Ubuntu: Fix issue with Qt clipboard
   return retVal;
 }
-
-// Suppress warning with --enable-final
-#undef VERSION
