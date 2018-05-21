@@ -852,11 +852,6 @@ void SourceData::FileData::preprocess( bool bPreserveCR, QTextCodec* pEncoding )
             vOrigDataLineEndStyle.push_back( eLineEndStyleDos );
             i+=2;
          }
-         else // old mac line end style ?
-         {
-            vOrigDataLineEndStyle.push_back( eLineEndStyleUndefined );
-            const_cast<char*>(m_pBuf)[i]='\n'; // fix it in original data
-         }
       }
       else if ( m_pBuf[i]=='\n' )
       {
