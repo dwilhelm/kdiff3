@@ -1,6 +1,6 @@
-/.vs
-/Debug
-/Release
+.vs/
+Debug/
+Release/
 *.o
 *.user
 .qmake.stash
