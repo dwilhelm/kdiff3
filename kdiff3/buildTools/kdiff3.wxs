@@ -34,8 +34,8 @@
                 <Directory Id="INSTALLDIR" Name="KDiff3-$(var.Version)">
                     <Component Id="MainExecutable" Guid="A5647472-E191-43A8-AF37-5069B6F116CF" Win64="yes">
                         <File Id="KDiffEXE" Name="kdiff3.exe" DiskId="1" Source="kdiff3.exe"  KeyPath="yes">
-                            <Shortcut Id="StartMenu" Directory="ProgramMenuDir" Name="Kdiff3" Icon="kdiff3.exe"
-                                  WorkingDirectory="INSTALLDIR" Description="Kdiff3" Advertise="yes" >
+                            <Shortcut Id="StartMenu" Directory="ProgramMenuDir" Name="Kdiff3-$(var.Version)" Icon="kdiff3.exe"
+                                  WorkingDirectory="INSTALLDIR" Description="Kdiff3-$(var.Version)" Advertise="yes" >
                             </Shortcut>
                         </File>
                     </Component>
