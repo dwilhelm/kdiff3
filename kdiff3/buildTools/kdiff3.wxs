@@ -31,11 +31,11 @@
         <Directory Id="TARGETDIR" Name="SourceDir">
 
             <Directory Id="ProgramFiles64Folder" Name="PFiles">
-                <Directory Id="INSTALLDIR" Name="KDiff3-$(var.Version)">
+                <Directory Id="INSTALLDIR" Name="KDiff3">
                     <Component Id="MainExecutable" Guid="A5647472-E191-43A8-AF37-5069B6F116CF" Win64="yes">
                         <File Id="KDiffEXE" Name="kdiff3.exe" DiskId="1" Source="kdiff3.exe"  KeyPath="yes">
-                            <Shortcut Id="StartMenu" Directory="ProgramMenuDir" Name="Kdiff3-$(var.Version)" Icon="kdiff3.exe"
-                                  WorkingDirectory="INSTALLDIR" Description="Kdiff3-$(var.Version)" Advertise="yes" >
+                            <Shortcut Id="StartMenu" Directory="ProgramMenuDir" Name="Kdiff3" Icon="kdiff3.exe"
+                                  WorkingDirectory="INSTALLDIR" Description="Kdiff3" Advertise="yes" >
                             </Shortcut>
                         </File>
                     </Component>
@@ -55,7 +55,7 @@
             </Directory>
 
             <Directory Id="ProgramMenuFolder" Name="Programs">
-                <Directory Id="ProgramMenuDir" Name="KDiff3-$(var.Version)">
+                <Directory Id="ProgramMenuDir" Name="KDiff3">
                     <Component Id="ProgramMenuDir" Guid="D8D98BEC-6B0A-4C58-BE8A-BE6F60B1C3A8">
                         <RemoveFolder Id="ProgramMenuDir" On="uninstall" />
                         <RegistryValue Root="HKCU" Key="Software\[Manufacturer]\[ProductName]" Type="string" Value="" KeyPath="yes" />
